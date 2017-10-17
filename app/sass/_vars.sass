@@ -1,0 +1,74 @@
+$default-font: "OpenSans", sans-serif
+$accent: orange
+$tr: transparent
+
+// colors
+$bg-darkgrey: #292929
+$bg-lightgrey: #f8f5f2
+
+// MEDIA
+$mobile-widths-only: 767px
+$tablet: 768px
+$desktop: 1200px
+// MEDIA END
+
+// CONTAINER-mobile-first!
+=container-mobile
+	width: 320px
+	margin: 0 auto
+
+	@media (min-width: $tablet)
+		width: 640px
+
+	@media (min-width: $desktop)
+		width: 960px
+
+=container-mobile-fluid
+	width: auto
+
+	@media (min-width: $tablet)
+		width: 84%
+		max-width: 960px
+		
+		margin: 0 auto
+// CONTAINER END
+
+// CONTAINER-desktop first!
+=container-desktop
+	width: 1200px
+
+	margin: 0 auto
+
+	@media (max-width: 768px)
+		width: 668px
+
+	@media (max-width: 320px)
+		width: 260px
+
+=counter($var)
+	counter-reset: $var
+	& > li:before
+		content: counter($var)
+		counter-increment: $var
+
+=placeholder-color($color)
+	&:-moz-placeholder,
+	&::-moz-placeholder
+		color: $color
+		opacity: 1
+	&::-webkit-input-placeholder
+		color: $color
+
+=text-overflow
+	overflow: hidden
+	text-oveflow: ellipsis
+	white-space: nowrap
+
+=tr($var)
+	transition: $var
+
+=clearfix
+	&:after
+		content: ''
+		clear: both
+		display: table

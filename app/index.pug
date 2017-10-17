@@ -1,0 +1,29 @@
+include mixins/mixins
+include layout/blocks
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		+settings()
+	body
+		.card__wrapper
+			.details
+				.user__photo
+					a.new__user
+					img(src="https://randomuser.me/api/portraits/women/5.jpg", alt="Avatar")
+				p.user__title Hi, My name is 
+				p.user__value loretta patterson
+			ul.card__list
+				li.active <i class="fa fa-user" aria-hidden="true"></i>
+				li <i class="fa fa-envelope" aria-hidden="true"></i>
+				li <i class="fa fa-calendar" aria-hidden="true"></i>
+				li <i class="fa fa-map-marker" aria-hidden="true"></i>
+				li <i class="fa fa-phone" aria-hidden="true"></i>
+				li <i class="fa fa-unlock" aria-hidden="true"></i>
+		
+		
+		link(rel="stylesheet" href="css/main.min.css")
+		script(src="js/scripts.min.js")
+		//- SVG
+		include mixins/sprite
+	
