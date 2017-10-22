@@ -80,3 +80,34 @@ body
         color: green
       &:after
         top: 0
+
+.user__photo 
+  position: relative
+  overflow: hidden
+
+.new__user
+  position: fixed
+  bottom: 30px
+  left: 50%
+  transform: translate(-50%, 0)
+  display: block
+  cursor: pointer
+
+  z-index: 2
+
+  font-size: 40px
+
+  background-color: rgba(0, 0, 0, .40)
+  color: white
+  padding: 5px 15px
+  white-space: nowrap
+
+  +tr(.2s ease-in-out)
+
+  &:hover
+    text-decoration: none
+    color: #ccc
+
+
+.user__value 
+  text-transform: capitalize
